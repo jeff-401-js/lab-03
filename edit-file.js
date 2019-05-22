@@ -19,16 +19,16 @@ for(let i = 2; i < args.length; i++){
   console.log(args[i]);
 }
 
-fs.readFile('./files/test.txt', (err, data) => {
+fs.readFile(`${sourceFile}`, (err, data) => {
   if (err) throw err;
   console.log(data.toString());
   let randomVal = Math.random() * (100 - 1) + 1;
 
-  fs.writeFile('./files/test.txt', randomVal, (err) => {
+  fs.writeFile(`${sourceFile}`, randomVal, (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
 
-    fs.readFile('./files/test.txt', (err, data) => {
+    fs.readFile(`${sourceFile}`, (err, data) => {
       if (err) throw err;
       console.log(data.toString());
     });
