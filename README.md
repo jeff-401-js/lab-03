@@ -18,8 +18,10 @@ Jeff
 ### Modules
 
 #### `modulename.js`
-
-
+reader.js
+reader-broken.js
+reader-promise.js
+reader-async.js
 ##### Exported Values and Methods
 
 
