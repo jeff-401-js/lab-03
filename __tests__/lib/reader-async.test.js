@@ -2,16 +2,16 @@
 
 jest.mock('fs');
 
-const readerPromises = require('../../lib/reader-promises.js');
+const readerAsync = require('../../lib/reader-async.js');
 
 describe('File Reader promises Module fails', () => {
 
-  it('when given a bad file, returns an error', () => {
-    let files = ['bad.txt'];
+  it('when given a bad file, returns an error', async () => {
 
-    return readerPromises(files)
-      .then()
-      .catch(err => expect(err).toBeDefined());
+    try{
+      let result = await readerAsync(false);
+      expect(result).toBeUndefined();
+    }catch(err){}
   });
 
 
