@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 'use strict';
 
 jest.mock('fs');

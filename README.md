@@ -24,7 +24,8 @@ reader-promise.js
 reader-async.js
 ##### Exported Values and Methods
 
-
+readAll(3files)-->reads three files in order using callbacks, promises and async await
+contents(array)-->output of running readAll
 
 ### Setup
 #### `.env` requirements
